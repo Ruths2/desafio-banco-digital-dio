@@ -3,11 +3,14 @@ import java.util.*;
 public class Main {
 	
 	public static void main(String[] args) {
-		Conta cc = new ContaCorrente();
+        
+        Cliente jairo = new Cliente();
+        jairo.setNome("Jairo");
+        
+		Conta cc = new ContaCorrente(jairo);
+		Conta cp = new ContaPoupanca(jairo);
+        
         cc.depositar(100);
-        
-		Conta cp = new ContaPoupanca();
-        
         cc.transferir(100, cp);
 		
 		cc.imprimirExtrato();

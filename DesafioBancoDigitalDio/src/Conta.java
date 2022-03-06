@@ -44,9 +44,10 @@ public abstract class Conta implements InterfaceConta{
 	}
 
 	protected void imprimirInfoConta(){
-		System.out.println(String.format("Agencia: %d",agencia));
-		System.out.println(String.format("Número: %d",numero));
-		System.out.println(String.format("Saldo: $%.2f",saldo));
+        System.out.println(String.format("Titular: %s",this.cliente.getNome()));
+		System.out.println(String.format("Agencia: %d",this.agencia));
+		System.out.println(String.format("Número: %d",this.numero));
+		System.out.println(String.format("Saldo: $%.2f",this.saldo));
 	}
 
 }
